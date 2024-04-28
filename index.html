@@ -8,8 +8,10 @@
 </head>
 <body>
     <header>
-        <h1>Active Edge</h1>
-        <h4>NUTRITION & MASSAGE</h4>
+        <div class="logo">
+            <img src="/images/image.png" alt="Logo">
+            <h1>ACTIVE EDGE</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="about.html">About</a></li>
@@ -19,16 +21,34 @@
             </ul>
         </nav>
     </header>
+    <section class="formsection">
+        <h1 class="">Ready to build something awesome?</h1>
+        <h2>NUTRITION & MASSAGE</h2>
+        <p class="formp">Let's Boost Your Performance Together! Connect with us to learn more.</p>
+        <form id="myForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <section class="flex-container">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Elevate Performance with Nutrition & Massage.</h1>
+                <p>Experience the transformative power of active wellness at Active Edge - Nutrition & Massage. As your dedicated health expert, I use my academic knowledge and practical experience to provide tailored nutrition consultations and sports massage therapy. With an integrated approach to health and fitness, I'm here to help athletes and fitness enthusiasts unleash and optimize their performance. At Active Edge, we go beyond consultation - your fitness achievements are our focus. Start your journey to better performance, health and wellbeing with me today.</p>
+            </div>
+            <img src="/images/tom_profile_pic.png" alt="Tom providing services">
+        </section>
+    </section>
     <section>
-        <h2>Unlock Your Potential: Elevate Performance with Nutrition & Massage</h2>
-        <p>Witness the transformative power of active wellness at Active Edge - Nutrition & Massage. Our leading health expert, Tom Baker, combines his academic knowledge and practical experience to deliver bespoke nutrition consultations and sports massage therapy.</p>
-        <p>With a strong foundation in Human Nutrition and Sports Therapy, Tom offers an integrated approach to health and fitness, meticulously designed for athletes and fitness enthusiasts alike.</p> 
-        <p>Unleash your power and optimise your performance as we extend support beyond the consultation room. With Active Edge, achieving your fitness goals is not just a possibility but a certainty. So why wait? Embark on your journey to active health and wellbeing today.</p>
-        <button onclick="window.location.href='contact.html';">Book Now</button>
-        <img src="/images/tom_profile_pic.png" alt="Tom providing services">
+        
     </section>
     <footer>
-        <p>© Copyright Active Edge</p>
+        <p>© Copyright Active Edge - Website built by Tom Baker</p>
     </footer>
     <script src="script.js"></script>
 </body>

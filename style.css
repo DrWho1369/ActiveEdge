@@ -1,26 +1,43 @@
 :root {
-    --higlight-color: #8fb660;
+    --higlight-color: #EA5455;
     --text-color: #30475e;
-    --background-color: #FFFFFF;
+    --background-color: #f7f7f7;
+    --black-color: #000000;
+    --footer-color: #bfbfbf;
+    --sky-blue: #84a9ac;
+
+
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: var(--background-color);
+    
 }
 
 header {
-    margin: 20px;
-    background-color: var(--text-color);
-    color: var(--background-color);
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
     padding: 20px;
     border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    max-width: 50px;
 }
 
 header h1 {
     margin: 0;
+    color: var(--higlight-color);
 }
 
 nav ul {
@@ -34,7 +51,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--background-color);
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -43,52 +60,121 @@ nav ul li a:hover {
     color: var(--higlight-color);
 }
 
-section {
-    margin: 20px;
-    padding: 20px;
+/* Form Styles -  */
+.formsection {
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-section img{
-    width: 300px;
-    height: auto;
+section h1 {
+    text-align: center;
+    font-size: 3em; /* Adjust based on preference */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+section p {
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.5em;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+form label {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+form input, form textarea {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: var(--background-color);
+    background-color: var(--higlight-color);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: #30475e;
+}
+
+
+/* Hero Section  */
+
+.flex-container {
+    justify-content: left;
+    align-items: center;
+}
+
+.hero {
+    padding: 50px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin: 20px 0px;
 }
 
-section h2 {
+
+
+.hero h1, .hero p {
     color: var(--text-color);
+    text-align: left;
 }
 
-section p {
-    color: var(--text-color);
-}
 
-button {
-    background-color: var(--higlight-color);
-    color: var(--background-color);
+
+
+.hero img{
+    width: 300px;
+    height: auto;
     border-radius: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
-    max-width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 20px 20px;
 }
 
-button:hover {
-    background-color: #30475e;
-}
 
 footer {
     background-color: #bfbfbf;
     color: #000000;
     text-align: center;
     padding: 20px;
+}
+
+/* Rest of your CSS */
+@media screen and (min-width: 992px) {
+    form, .formp {
+        width: 50%; /* Make form only occupy 50% (or 2/4) of container on larger screens */
+        margin: 20px auto; /* Center form in its container */
+    }
+    body {
+        padding: 0px 100px;
+    }
+    .hero {
+        display: flex;
+    }
+    .hero-text {
+        flex: 2;
+    }
 }
