@@ -161,3 +161,34 @@ carousel1.create();
 window.addEventListener("unload", () => {
   carousel1.destroy();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Step 1: Target the submit button on click
+  var submitButton = document.querySelector("#myForm button[type='submit']");
+
+  submitButton.addEventListener("click", function (event) {
+    // Step 2: Prevent default form submission behavior
+    event.preventDefault();
+
+    // Step 3: Replace the form element with a success message container
+    var form = document.getElementById("myForm");
+    var successContainer = document.createElement("div");
+    successContainer.classList.add("success-container");
+
+    var successMessage = document.createElement("div");
+    successMessage.textContent =
+      "Thank you! While you wait, you can explore our learn articles.";
+    successContainer.appendChild(successMessage);
+
+    // Step 4: Add a button linking to the /learn HTML page inside the success message container
+    var learnButton = document.createElement("button");
+    learnButton.textContent = "Explore Learn Articles";
+    learnButton.addEventListener("click", function () {
+      window.location.href = "/learn"; // Change this to the actual URL of the learn page
+    });
+    successContainer.appendChild(learnButton);
+
+    // Replace the form with the success container
+    form.parentNode.replaceChild(successContainer, form);
+  });
+});

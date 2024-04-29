@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Active Edge Homepage</title>
     <link rel="stylesheet" href="style.css" />
     <script
       type="text/javascript"
@@ -36,16 +36,20 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="./images/image.png" alt="Logo" />
-        <h1>ACTIVE EDGE</h1>
+      <div class="">
+        <a href="index.html"
+          ><div class="logo">
+            <img src="./images/image.png" alt="Logo" />
+            <h1>ACTIVE EDGE</h1>
+          </div>
+        </a>
       </div>
       <nav>
         <ul>
-          <li><a href="about.html">About</a></li>
+          <li><a href="#about-section">About</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="testimonial.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact/Booking</a></li>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="index.html">Contact/Booking</a></li>
         </ul>
       </nav>
     </header>
@@ -56,6 +60,7 @@
         Let's Boost Your Performance Together! Connect with us to learn more.
       </p>
       <form id="myForm">
+        <input type="hidden" name="contact_number" value="697483" />
         <label for="name">Name:</label>
         <input
           type="text"
@@ -83,7 +88,7 @@
       </form>
     </section>
     <section class="flex-container">
-      <section class="hero">
+      <section class="hero" id="about-section">
         <div class="hero-text">
           <h1>Elevate Performance with Nutrition & Massage</h1>
           <h2>Welcome to the world of active wellness at Active Edge</h2>
