@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var button = document.createElement("button");
     button.textContent = "Learn More";
     button.addEventListener("click", function () {
-      window.location.href = "index.html#about-section";
+      window.location.href = "index.html";
     });
     listItem.appendChild(image);
     listItem.appendChild(heading);
