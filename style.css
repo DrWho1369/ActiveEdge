@@ -238,7 +238,7 @@ button:hover {
 }
 
 .hero {
-  padding: 50px;
+  padding: 50px 30px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin: 20px 10px;
