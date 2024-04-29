@@ -192,3 +192,29 @@ document.addEventListener("DOMContentLoaded", function () {
     form.parentNode.replaceChild(successContainer, form);
   });
 });
+
+function enlargeImage(event) {
+  // Get the clicked image element
+  var clickedImage = event.target;
+
+  // Check if the device is a phone
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    // Calculate the new width and height for the enlarged image
+    var newWidth = clickedImage.width * 3;
+    var newHeight = clickedImage.height * 3;
+
+    // Set the new width and height for the clicked image
+    clickedImage.style.width = newWidth + "px";
+    clickedImage.style.height = newHeight + "px";
+  }
+}
+
+// Add event listener to each image
+var images = document.querySelectorAll(".slide-content img");
+images.forEach(function (image) {
+  image.addEventListener("click", enlargeImage);
+});
