@@ -1,55 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <img src="./images/image.png" alt="Logo">
-            <h1>ACTIVE EDGE</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="testimonial.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact/Booking</a></li>
-            </ul>
-        </nav>
+      <div class="logo">
+        <img src="./images/image.png" alt="Logo" />
+        <h1>ACTIVE EDGE</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="testimonial.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact/Booking</a></li>
+        </ul>
+      </nav>
     </header>
     <section class="formsection">
-        <h1 class="">Ready to build something awesome?</h1>
-        <h2>NUTRITION & MASSAGE</h2>
-        <p class="formp">Let's Boost Your Performance Together! Connect with us to learn more.</p>
-        <form id="myForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
+      <h1 class="">Ready to build something awesome?</h1>
+      <h2>NUTRITION & MASSAGE</h2>
+      <p class="formp">
+        Let's Boost Your Performance Together! Connect with us to learn more.
+      </p>
+      <form id="myForm">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@email.co.uk"
+          required
+        />
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Describe your goals"
+          required
+        ></textarea>
+        <button type="submit">Submit</button>
+      </form>
     </section>
     <section class="flex-container">
-        <section class="hero">
-            <div class="hero-text">
-                <h1>Elevate Performance with Nutrition & Massage.</h1>
-                <p>Experience the transformative power of active wellness at Active Edge - Nutrition & Massage. As your dedicated health expert, I use my academic knowledge and practical experience to provide tailored nutrition consultations and sports massage therapy. With an integrated approach to health and fitness, I'm here to help athletes and fitness enthusiasts unleash and optimize their performance. At Active Edge, we go beyond consultation - your fitness achievements are our focus. Start your journey to better performance, health and wellbeing with me today.</p>
-            </div>
-            <img src="./images/tom_profile_pic.png" alt="Tom providing services">
-        </section>
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Elevate Performance with Nutrition & Massage</h1>
+          <h2>Welcome to the world of active wellness at Active Edge</h2>
+          <p>
+            I'm Tom. As your dedicated health expert, I use my academic
+            knowledge and practical experience to provide tailored nutrition
+            consultations and sports massage therapy. With an integrated
+            approach to health and fitness, I'm here to help athletes and
+            fitness enthusiasts unleash and optimize their performance. At
+            Active Edge, we go beyond consultation - your fitness achievements
+            are our focus. Start your journey to better performance, health and
+            wellbeing with me today
+          </p>
+        </div>
+        <img src="./images/tom_profile_pic.png" alt="Tom providing services" />
+      </section>
     </section>
-    <section>
-        
+    <section class="carouselwrapper">
+      <div
+        id="carousel-1"
+        class="carousel"
+        role="region"
+        aria-labelledby="carousel-1-title"
+      >
+        <h2 class="carousel-title" id="carousel-1-title">
+          Active Edges Credentials
+        </h2>
+        <p class="carousel-description">Qualifications and Certifications</p>
+        <div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-1-title"
+        >
+          <div class="slide-content">
+            <div class="slide-caption">
+              <p>Masters in Human Nutrition</p>
+            </div>
+
+            <img
+              src="./images/msc_nutrition.jpg"
+              alt="MSc Human Nutrition - University of Surrey"
+              width="800"
+              height="350"
+            />
+          </div>
+        </div>
+
+        <div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-2-title"
+        >
+          <div class="slide-content">
+            <div class="slide-caption">
+              <p>Level 3 Sports Massage Therapy</p>
+            </div>
+            <img
+              src="./images/sportsmassage_cert.jpg"
+              alt="Sports Massage Therapy Certificate"
+              width="800"
+              height="350"
+            />
+          </div>
+        </div>
+
+        <div
+          class="slide"
+          role="tabpanel"
+          aria-labelledby="carousel-1-slide-3-title"
+        >
+          <div class="slide-content">
+            <div class="slide-caption">
+              <p>Diploma in Pregnancy & Postntal Massage</p>
+            </div>
+
+            <img
+              src="./images/pregnancy_cert.jpg"
+              alt="Diploma in Pregnancy & Postntal Massage Certificate"
+              width="800"
+              height="350"
+            />
+          </div>
+        </div>
+      </div>
     </section>
     <footer>
-        <p>© Copyright Active Edge - Website built by Tom Baker</p>
+      <p>© Copyright Active Edge - Website built by Tom Baker</p>
     </footer>
-    <script src="script.js"></script>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
