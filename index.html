@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script>
+      (function () {
+        emailjs.init("ZL0FQgT4P4TyeaNL4");
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm("contact_service", "contact_form", this).then(
+              () => {
+                console.log("SUCCESS!");
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
   </head>
   <body>
     <header>
@@ -142,7 +170,7 @@
       </div>
     </section>
     <footer>
-      <p>© Copyright Active Edge - Website built by Tom Baker</p>
+      <p>© Copyright Active Edge - Website design and build by Tom Baker</p>
     </footer>
     <script src="index.js"></script>
   </body>
