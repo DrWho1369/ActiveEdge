@@ -322,6 +322,62 @@ footer {
 .carousel-btn--next {
   right: var(--carousel-inner-spacing);
 }
+
+/* Services */
+
+.services-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.services-container h1 {
+  text-align: center;
+  color: var(--text-color);
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 0px;
+}
+
+.service-card {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--background-color);
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.service-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.service-card h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.service-card p {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.service-card button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 /* Media Queries */
 @media screen and (min-width: 992px) {
   form,
