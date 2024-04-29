@@ -36,23 +36,41 @@
   </head>
   <body>
     <header>
-      <div class="">
-        <a href="index.html"
-          ><div class="logo">
+      <!-- Desktop Nav -->
+      <div class="desktop-nav">
+        <a href="index.html">
+          <div class="logo">
             <img src="./images/image.png" alt="Logo" />
             <h1>ACTIVE EDGE</h1>
           </div>
         </a>
+        <nav>
+          <ul>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="index.html">Contact/Booking</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#about-section">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="learn.html">Learn</a></li>
-          <li><a href="index.html">Contact/Booking</a></li>
-        </ul>
-      </nav>
+
+      <!-- Mobile Nav -->
+      <div class="mobile-nav">
+        <input type="checkbox" id="toggle-menu" />
+        <label for="toggle-menu" class="hamburger-menu">
+          <img src="./images/image.png" alt="Menu" />
+        </label>
+        <nav>
+          <ul>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="index.html">Contact/Booking</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
+
     <section class="formsection">
       <h1 class="">Ready to build something awesome?</h1>
       <h2>NUTRITION & MASSAGE</h2>

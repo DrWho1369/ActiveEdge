@@ -45,16 +45,89 @@ video,
 audio {
   max-width: 100%;
 }
+/* Mobile Nav */
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.mobile-nav label {
+  display: block;
+  cursor: pointer;
+}
+
+.hamburger-menu img {
+  width: 30px;
+  height: auto;
+}
+
+.mobile-nav nav {
+  display: none;
+  margin-top: 10px;
+}
+
+.mobile-nav nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-nav nav ul li {
+  margin-bottom: 10px;
+}
+
+.mobile-nav nav ul li:last-child {
+  margin-bottom: 0;
+}
+
+.mobile-nav nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Desktop Nav */
+.desktop-nav {
+  display: none;
+}
+
+.desktop-nav nav {
+  margin-left: auto;
+}
+
+.desktop-nav nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-nav nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.desktop-nav nav ul li:last-child {
+  margin-right: 0;
+}
+
+.desktop-nav nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
 
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: linear-gradient(to top, transparent, var(--background-color) 40%);
+  background: linear-gradient(to top, transparent, var(--background-color) 10%);
   z-index: 1000;
   margin: auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   color: var(--text-color);
   padding: 20px 20px 40px 20px;
@@ -78,7 +151,7 @@ header h1 {
   color: var(--higlight-color);
 }
 
-nav ul {
+/* nav ul {
   list-style-type: none;
   padding: 0;
 }
@@ -91,7 +164,7 @@ nav ul li {
 nav ul li a {
   color: var(--text-color);
   text-decoration: none;
-}
+} */
 
 nav ul li a:hover {
   color: var(--higlight-color);
@@ -379,6 +452,29 @@ footer {
   transform: translateX(-50%);
 }
 /* Media Queries */
+
+/* Media Queries */
+@media screen and (min-width: 769px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  header {
+    background: linear-gradient(
+      to top,
+      transparent,
+      var(--background-color) 40%
+    );
+  }
+}
+
 @media screen and (min-width: 992px) {
   form,
   .formp {
