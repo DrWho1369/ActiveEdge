@@ -234,3 +234,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+function downloadPDF(pdfPath) {
+  // Create an anchor element
+  const link = document.createElement("a");
+  link.href = pdfPath;
+
+  // Set the download attribute and filename
+  link.download = pdfPath.split("/").pop(); // Extract filename from path
+
+  // Append the anchor element to the document body
+  document.body.appendChild(link);
+
+  // Trigger the click event
+  link.click();
+
+  // Remove the anchor element
+  document.body.removeChild(link);
+}
