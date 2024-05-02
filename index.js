@@ -224,13 +224,13 @@ document.addEventListener("DOMContentLoaded", function () {
   var toggleMenuCheckbox = document.getElementById("toggle-menu");
   var mobileNav = document.querySelector(".mobile-nav nav");
 
-  // Add event listener to the hamburger menu checkbox
-  toggleMenuCheckbox.addEventListener("change", function () {
-    // If the checkbox is checked, display the mobile nav; otherwise, hide it
-    if (this.checked) {
-      mobileNav.style.display = "block";
-    } else {
+  // Add event listener to the toggle-menu element
+  toggleMenuCheckbox.addEventListener("click", function () {
+    // Toggle the display of mobileNav
+    if (mobileNav.style.display === "block") {
       mobileNav.style.display = "none";
+    } else {
+      mobileNav.style.display = "block";
     }
   });
 });
