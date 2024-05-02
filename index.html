@@ -9,7 +9,32 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
+
+    <!-- <script>
+    (function () {
+      emailjs.init("ZL0FQgT4P4TyeaNL4");
+    })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function () {
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          // these IDs from the previous steps
+          emailjs.sendForm("contact_service", "contact_form", this).then(
+            () => {
+              console.log("SUCCESS!");
+            },
+            (error) => {
+              console.log("FAILED...", error);
+            }
+          );
+        });
+    };
+  </script> -->
   </head>
+
   <body>
     <header>
       <!-- Desktop Nav -->
@@ -19,17 +44,24 @@
             <img src="./images/image.png" alt="Logo" />
             <h1>ACTIVE EDGE</h1>
           </div>
-
-          <img src="./images/msc_nutrition.jpg" alt="MSc Human Nutrition - University of Surrey" width="800"
-            height="350" />
-        </div>
+        </a>
+        <nav>
+          <ul>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="index.html">Contact/Booking</a></li>
+          </ul>
+        </nav>
       </div>
 
       <!-- Mobile Nav -->
       <div class="mobile-nav">
         <input type="checkbox" id="toggle-menu" />
+        <!--change checkbox maybe? -->
         <label for="toggle-menu" class="hamburger-menu">
           <img src="./images/image.png" alt="Menu" />
+          <!-- invert logo to white, add black background with rounded edges? -->
         </label>
         <nav>
           <ul>
@@ -43,8 +75,8 @@
     </header>
 
     <section class="formsection">
-      <h1 class="">Ready to build something awesome?</h1>
-      <h2>NUTRITION & MASSAGE</h2>
+      <h1 class="headerBackground">Ready to build something awesome?</h1>
+      <h2 class="headerOrange">NUTRITION & MASSAGE</h2>
       <p class="formp">
         Let's Boost Your Performance Together! Connect with me to learn more.
       </p>
@@ -54,38 +86,43 @@
           name="access_key"
           value="b79cd4a4-3262-43b9-a677-a71fafde3479"
         />
-        <label for="name">Name:</label>
+        <label for="name" class="formInputHeader">Name:</label>
         <input
+          class="formInput"
           type="text"
           id="name"
           name="user_name"
           placeholder="Your Name"
           required
         />
-        <label for="email">Email:</label>
+        <label for="email" class="formInputHeader">Email:</label>
         <input
+          class="formInput"
           type="email"
           id="email"
           name="user_email"
           placeholder="example@email.co.uk"
           required
         />
-        <label for="message">Message:</label>
+        <label for="message" class="formInputHeader">Message:</label>
         <textarea
+          class="formInput"
           id="message"
           name="message"
           placeholder="Describe your goals"
           required
         ></textarea>
         <div class="h-captcha" data-captcha="true"></div>
-        <button type="submit">Submit</button>
+        <button type="submit" class="formButton">Submit</button>
       </form>
     </section>
     <section class="flex-container">
+      <!--background from current colour -> 1/3 way into footer colour? -->
       <section class="hero" id="about-section">
         <div class="hero-text">
           <h1>Elevate Performance with Nutrition & Massage</h1>
           <h2>Welcome to the world of active wellness at Active Edge</h2>
+          <!--orange for h2? -->
           <p>
             I'm Tom. As your dedicated health expert, I use my academic
             knowledge and practical experience to provide tailored nutrition
@@ -98,9 +135,12 @@
           </p>
         </div>
         <img src="./images/tom_profile_pic.png" alt="Tom providing services" />
+        <!--img doesnt scale correctly, make block display under 1800px? -->
       </section>
     </section>
     <section class="carouselwrapper">
+      <!--change certs to high quality scan rather than photo? -->
+      <!--on mobile blue hover applied on buttons on click, change? -->
       <div
         id="carousel-1"
         class="carousel"
@@ -165,8 +205,6 @@
               height="350"
             />
           </div>
-          <img src="./images/sportsmassage_cert.jpg" alt="Sports Massage Therapy Certificate" width="800"
-            height="350" />
         </div>
       </div>
     </section>
