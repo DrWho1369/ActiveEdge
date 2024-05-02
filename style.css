@@ -11,6 +11,7 @@
   --background-color: #f7f7f7;
   --black-color: #000000;
   --footer-color: #bfbfbf;
+  --banner-color: rgba(211, 211, 211, 0.31);
   --sky-blue: #84a9ac;
   --carousel-height: 350px;
   --carousel-radius: 0.5em;
@@ -155,6 +156,19 @@ nav ul li a:hover {
   color: var(--higlight-color);
 }
 
+.headerBackground{
+background-color: var(--banner-color);
+border: none;
+border-radius: 15px;
+padding: 1rem;
+padding-left: 4rem;
+padding-right: 4rem;
+}
+
+.headerOrange{
+  color: var(--higlight-color);
+}
+
 /* Form Styles -  */
 .formsection {
   display: flex;
@@ -230,6 +244,19 @@ button:hover {
   margin-top: 50px; /* Add some space between the message and the button */
 }
 
+.formInputHeader {
+  margin: 0.4rem;
+}
+
+.formInput {
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #000000;
+}
+
+.formButton {
+  margin-top: 0.5rem;
+}
 /* Hero Section  */
 
 .flex-container {
