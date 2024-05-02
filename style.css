@@ -55,6 +55,13 @@ audio {
   padding: 10px;
 }
 
+#ham-img {
+  display: block;
+}
+
+#close-img {
+  display: none;
+}
 .mobile-nav label {
   display: block;
   cursor: pointer;

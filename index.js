@@ -219,11 +219,35 @@ images.forEach(function (image) {
   image.addEventListener("click", enlargeImage);
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Get the hamburger menu checkbox and the mobile nav element
-  var toggleMenuCheckbox = document.getElementById("toggle-menu");
-  var mobileNav = document.querySelector(".mobile-nav nav");
+var toggleMenuCheckbox = document.getElementById("toggle-menu");
+var mobileNav = document.querySelector(".mobile-nav nav");
+var activeMenuImg = document.querySelector(".active");
+var inactiveMenuImg = document.querySelector(".inactive");
+var hamImg = document.getElementById("ham-img");
 
+var closeImg = document.getElementById("close-img");
+document.addEventListener("DOMContentLoaded", function () {
+  // Add event listener to the ham-img
+  hamImg.addEventListener("click", function () {
+    // Toggle the visibility of the images
+    hamImg.style.display = "none";
+    closeImg.style.display = "block";
+
+    // Swap the IDs of the images
+    hamImg.id = "close-img";
+    closeImg.id = "ham-img";
+  });
+
+  // Add event listener to the close-img
+  closeImg.addEventListener("click", function () {
+    // Toggle the visibility of the images
+    closeImg.style.display = "none";
+    hamImg.style.display = "block";
+
+    // Swap the IDs of the images
+    closeImg.id = "ham-img";
+    hamImg.id = "close-img";
+  });
   // Add event listener to the toggle-menu element
   toggleMenuCheckbox.addEventListener("click", function () {
     // Toggle the display of mobileNav
@@ -232,6 +256,12 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       mobileNav.style.display = "block";
     }
+
+    // Toggle the classes of menu images
+    activeMenuImg.classList.toggle("active");
+    activeMenuImg.classList.toggle("inactive");
+    inactiveMenuImg.classList.toggle("active");
+    inactiveMenuImg.classList.toggle("inactive");
   });
 });
 
