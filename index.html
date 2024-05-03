@@ -57,16 +57,14 @@
 
       <!-- Mobile Nav -->
       <div class="mobile-nav">
-        <!-- <input type="checkbox" id="toggle-menu" /> -->
-        <!--change checkbox maybe? -->
         <label id="toggle-menu" for="toggle-menu" class="hamburger-menu">
           <img id="menu-img" src="./images/image.png" alt="Menu" />
-          <img id="ham-img" src="./images/menu.png" alt="Menu" />
+          <img id="ham-img" src="./images/menu.png" alt="Menu" /> <!-- sidenote: ham and close display inverted on dom and CSS on toggle -->
           <img id="close-img" src="./images/close.png" alt="Menu" />
           <!-- invert logo to white, add black background with rounded edges? -->
         </label>
         <nav>
-          <ul>
+          <ul id="dropdown">
             <li><a href="#about-section">ABOUT</a></li>
             <li><a href="services.html">SERVICES</a></li>
             <li><a href="learn.html">LEARN</a></li>
@@ -77,7 +75,7 @@
     </header>
 
     <section class="formsection">
-      <h1 class="headerBackground">Ready to build something awesome?</h1>
+      <h1 class="headerBackground" id="main-header">Ready to build something awesome?</h1>
       <h2 class="headerOrange">NUTRITION & MASSAGE</h2>
       <p class="formp">
         Let's Boost Your Performance Together! Connect with me to learn more.
