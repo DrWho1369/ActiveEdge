@@ -51,7 +51,7 @@ audio {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start
+  align-items: flex-start;
   padding: 10px;
   width: 100%;
 }
@@ -66,18 +66,16 @@ audio {
   display: inline;
 }
 #close-img{
-  display: none;
-  width: 40px;
-}
-#ham-img,
-#close-img {
-  display: inline;
   margin-left: auto;
+  display: none;
+  max-width: 40px;
+}
+#ham-img {
+  margin-left: auto;
+  display: block;
+  width: 27px;
 }
 
-#ham-img{ 
-  width: 25px;
-}
 
 .mobile-nav label {
   cursor: pointer;
@@ -542,9 +540,22 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin: 20px 0px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   .hero-text {
     flex: 2;
+  }
+}
+
+@media screen and (min-width: 1800px){
+  .hero{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1160px) and (max-width: 1800px){
+  .hero img{
+    align-self: center;
   }
 }

@@ -255,10 +255,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var mainHeader = document.getElementById("main-header");
     if (mobileNav.style.display === "block") {
       mobileNav.style.display = "none";
-      mainHeader.style.marginTop = "2rem";
+      mainHeader.style.marginTop = "0rem";
     } else {
       mobileNav.style.display = "block";
-      mainHeader.style.marginTop = "10rem";
+      mainHeader.style.marginTop = "7rem";
     }
         
 
