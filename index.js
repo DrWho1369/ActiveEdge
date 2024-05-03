@@ -251,11 +251,17 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add event listener to the toggle-menu element
   toggleMenuCheckbox.addEventListener("click", function () {
     // Toggle the display of mobileNav
+    // add margin to header on dropdown toggle
+    var mainHeader = document.getElementById("main-header");
     if (mobileNav.style.display === "block") {
       mobileNav.style.display = "none";
+      mainHeader.style.marginTop = "0rem";
     } else {
       mobileNav.style.display = "block";
+      mainHeader.style.marginTop = "7rem";
     }
+        
+
 
     // Toggle the classes of menu images
     activeMenuImg.classList.toggle("active");
@@ -264,6 +270,8 @@ document.addEventListener("DOMContentLoaded", function () {
     inactiveMenuImg.classList.toggle("inactive");
   });
 });
+
+
 
 function downloadPDF(pdfPath) {
   // Create an anchor element

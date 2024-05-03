@@ -50,25 +50,39 @@ audio {
 .mobile-nav {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 10px;
+  width: 100%;
 }
 
-#ham-img {
-  display: block;
+#toggle-menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
-#close-img {
+#menu-img {
+  display: inline;
+}
+#close-img{
+  margin-left: auto;
   display: none;
+  max-width: 40px;
 }
-.mobile-nav label {
+#ham-img {
+  margin-left: auto;
   display: block;
+  width: 27px;
+}
+
+
+.mobile-nav label {
   cursor: pointer;
 }
 
 .hamburger-menu img {
-  width: 30px;
+  width: 40px;
   height: auto;
 }
 
@@ -93,8 +107,13 @@ audio {
 
 .mobile-nav nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: var(--higlight-color);
   font-weight: bold;
+}
+
+.mobile-nav nav ul li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Desktop Nav */
@@ -160,7 +179,7 @@ header h1 {
 }
 
 nav ul li a:hover {
-  color: var(--higlight-color);
+  color: var(--text-color);
 }
 
 .headerBackground {
@@ -173,7 +192,7 @@ nav ul li a:hover {
 }
 
 .headerOrange {
-  color: var(--higlight-color);
+  color: var(--higlight-color) !important
 }
 
 /* Form Styles -  */
@@ -307,7 +326,7 @@ footer {
   border-radius: 20px 20px 0px 0px;
 }
 
-/* Carosel */
+/* Carousel */
 
 .carouselwrapper {
   margin: 100px 0px;
@@ -521,9 +540,23 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin: 20px 0px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   .hero-text {
     flex: 2;
   }
 }
+
+@media screen and (min-width: 1800px){
+  .hero{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1160px) and (max-width: 1800px){
+  .hero img{
+    align-self: center;
+  }
+}
+
