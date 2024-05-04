@@ -65,26 +65,25 @@ audio {
 #menu-img {
   display: inline;
 }
-#close-img{
+#close-img {
   margin-left: auto;
   display: none;
-  max-width: 40px;
+  max-width: 30px;
 }
 #ham-img {
   margin-left: auto;
   display: block;
-  width: 27px;
+  width: 40px;
 }
-
 
 .mobile-nav label {
   cursor: pointer;
 }
 
-.hamburger-menu img {
-  width: 40px;
+/* .hamburger-menu img {
+  width: 30px;
   height: auto;
-}
+} */
 
 .mobile-nav nav {
   display: none;
@@ -192,7 +191,7 @@ nav ul li a:hover {
 }
 
 .headerOrange {
-  color: var(--higlight-color) !important
+  color: var(--higlight-color) !important;
 }
 
 /* Form Styles -  */
@@ -547,16 +546,15 @@ footer {
   }
 }
 
-@media screen and (min-width: 1800px){
-  .hero{
+@media screen and (min-width: 1800px) {
+  .hero {
     display: flex;
     flex-direction: row;
   }
 }
 
-@media screen and (min-width: 1160px) and (max-width: 1800px){
-  .hero img{
+@media screen and (min-width: 1160px) and (max-width: 1800px) {
+  .hero img {
     align-self: center;
   }
 }
-
