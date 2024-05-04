@@ -219,23 +219,27 @@ images.forEach(function (image) {
   image.addEventListener("click", enlargeImage);
 });
 
-var toggleMenuCheckbox = document.getElementById("toggle-menu");
-var mobileNav = document.querySelector(".mobile-nav nav");
-var activeMenuImg = document.querySelector(".active");
-var inactiveMenuImg = document.querySelector(".inactive");
-var hamImg = document.getElementById("ham-img");
-
-var closeImg = document.getElementById("close-img");
 document.addEventListener("DOMContentLoaded", function () {
+  var hamImg = document.getElementById("ham-img");
+  var closeImg = document.getElementById("close-img");
+  var mobileNav = document.querySelector(".mobile-nav nav");
+  var activeMenuImg = document.getElementById("menu-img");
+  var inactiveMenuImg = document.getElementById("ham-img");
+
   // Add event listener to the ham-img
   hamImg.addEventListener("click", function () {
     // Toggle the visibility of the images
     hamImg.style.display = "none";
     closeImg.style.display = "block";
 
+    // Toggle the display of mobileNav
+    mobileNav.style.display = "block";
+
     // Swap the IDs of the images
-    hamImg.id = "close-img";
-    closeImg.id = "ham-img";
+    activeMenuImg.classList.remove("active");
+    activeMenuImg.classList.add("inactive");
+    inactiveMenuImg.classList.remove("inactive");
+    inactiveMenuImg.classList.add("active");
   });
 
   // Add event listener to the close-img
@@ -244,34 +248,16 @@ document.addEventListener("DOMContentLoaded", function () {
     closeImg.style.display = "none";
     hamImg.style.display = "block";
 
-    // Swap the IDs of the images
-    closeImg.id = "ham-img";
-    hamImg.id = "close-img";
-  });
-  // Add event listener to the toggle-menu element
-  toggleMenuCheckbox.addEventListener("click", function () {
     // Toggle the display of mobileNav
-    // add margin to header on dropdown toggle
-    var mainHeader = document.getElementById("main-header");
-    if (mobileNav.style.display === "block") {
-      mobileNav.style.display = "none";
-      mainHeader.style.marginTop = "0rem";
-    } else {
-      mobileNav.style.display = "block";
-      mainHeader.style.marginTop = "7rem";
-    }
-        
+    mobileNav.style.display = "none";
 
-
-    // Toggle the classes of menu images
-    activeMenuImg.classList.toggle("active");
-    activeMenuImg.classList.toggle("inactive");
-    inactiveMenuImg.classList.toggle("active");
-    inactiveMenuImg.classList.toggle("inactive");
+    // Swap the IDs of the images
+    activeMenuImg.classList.remove("inactive");
+    activeMenuImg.classList.add("active");
+    inactiveMenuImg.classList.remove("active");
+    inactiveMenuImg.classList.add("inactive");
   });
 });
-
-
 
 function downloadPDF(pdfPath) {
   // Create an anchor element
