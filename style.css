@@ -581,11 +581,11 @@ footer {
 
 @media screen and (max-width: 870px) {
   .desktop-nav nav ul {
-    justify-content: center; /* Center align the list items */
+    justify-content: center;
   }
 
   .desktop-nav nav ul li {
-    margin-right: 0px; /* Reduce the space between list items */
+    margin-right: 0px;
     margin-left: 0px;
     font-size: 0.85rem;
     font-weight: bold;
