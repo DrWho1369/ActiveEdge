@@ -128,11 +128,13 @@ audio {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
 .desktop-nav nav ul li {
   display: inline-block;
   margin-right: 20px;
+  justify-content: space-between;
 }
 
 .desktop-nav nav ul li:last-child {
@@ -144,6 +146,18 @@ audio {
   color: #333;
   font-weight: bold;
 }
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+#logo-header {
+  margin-left: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 
 header {
   position: fixed;
@@ -562,5 +576,18 @@ footer {
 @media screen and (min-width: 1160px) and (max-width: 1800px) {
   .hero img {
     align-self: center;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .desktop-nav nav ul {
+    justify-content: center; /* Center align the list items */
+  }
+
+  .desktop-nav nav ul li {
+    margin-right: 0px; /* Reduce the space between list items */
+    margin-left: 0px;
+    font-size: 0.85rem;
+    font-weight: bold;
   }
 }
