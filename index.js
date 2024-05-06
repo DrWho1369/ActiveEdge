@@ -227,10 +227,13 @@ document.addEventListener("DOMContentLoaded", function () {
   var inactiveMenuImg = document.getElementById("ham-img");
 
   // Add event listener to the ham-img
+  var mainHeader = document.getElementById("main-header");
   hamImg.addEventListener("click", function () {
     // Toggle the visibility of the images
     hamImg.style.display = "none";
     closeImg.style.display = "block";
+    // margin to page top
+    mainHeader.style.marginTop = "7rem";
 
     // Toggle the display of mobileNav
     mobileNav.style.display = "block";
@@ -247,6 +250,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Toggle the visibility of the images
     closeImg.style.display = "none";
     hamImg.style.display = "block";
+    // margin to page top
+    mainHeader.style.marginTop = "0rem";
 
     // Toggle the display of mobileNav
     mobileNav.style.display = "none";
