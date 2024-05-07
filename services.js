@@ -92,17 +92,26 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Get the hamburger menu checkbox and the mobile nav element
-  var toggleMenuCheckbox = document.getElementById("toggle-menu");
+  var hamImg = document.getElementById("ham-img");
+  var closeImg = document.getElementById("close-img");
   var mobileNav = document.querySelector(".mobile-nav nav");
+  var servicesContainer = document.getElementById("services");
 
-  // Add event listener to the hamburger menu checkbox
-  toggleMenuCheckbox.addEventListener("change", function () {
-    // If the checkbox is checked, display the mobile nav; otherwise, hide it
-    if (this.checked) {
-      mobileNav.style.display = "block";
-    } else {
-      mobileNav.style.display = "none";
-    }
+  hamImg.addEventListener("click", function () {
+    // Toggle the visibility of the images
+    hamImg.style.display = "none";
+    closeImg.style.display = "block";
+    // Toggle the display of mobileNav
+    mobileNav.style.display = "block";
+    servicesContainer.style.paddingTop = "7rem"; // Change marginTop to paddingTop
+  });
+
+  closeImg.addEventListener("click", function () {
+    // Toggle the visibility of the images
+    closeImg.style.display = "none";
+    hamImg.style.display = "block";
+    // Toggle the display of mobileNav
+    mobileNav.style.display = "none";
+    servicesContainer.style.paddingTop = "20px"; // Reset padding when closing
   });
 });
