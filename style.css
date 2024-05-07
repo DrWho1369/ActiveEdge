@@ -195,6 +195,10 @@ nav ul li a:hover {
   color: var(--text-color);
 }
 
+.main-header{
+  margin-top: 2rem;
+}
+
 .headerBackground {
   background-color: var(--banner-color);
   border: none;
