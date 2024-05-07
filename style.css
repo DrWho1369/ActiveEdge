@@ -463,7 +463,7 @@ footer {
   max-width: 800px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: var(--background-color);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -483,28 +483,31 @@ footer {
 .service-card {
   padding: 20px;
   border-radius: 10px;
-  background-color: var(--background-color);
+  background-color: var(--banner-color);
   position: relative;
-  padding-bottom: 60px;
 }
 
 .service-card img {
   max-width: 100%;
   min-height: fit-content;
-
-  border-radius: 5px;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
   margin-bottom: 10px;
 }
 
 .service-card h2 {
-  margin-top: 0;
+  margin-top: 0.5rem;
   margin-bottom: 10px;
-  color: var(--text-color);
+  color: var(--higlight-color);
 }
 
 .service-card p {
   margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  font-size: 1rem;
   color: var(--text-color);
+  font-weight: 600;
 }
 
 .service-card button {
