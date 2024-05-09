@@ -213,29 +213,32 @@ function enlargeImage(event) {
   }
 }
 
-// Add event listener to each image
-var images = document.querySelectorAll(".slide-content img");
-images.forEach(function (image) {
-  image.addEventListener("click", enlargeImage);
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   var hamImg = document.getElementById("ham-img");
   var closeImg = document.getElementById("close-img");
   var mobileNav = document.querySelector(".mobile-nav nav");
   var activeMenuImg = document.getElementById("menu-img");
   var inactiveMenuImg = document.getElementById("ham-img");
+  var mainHeader = document.getElementById("main-header");
+
+  // Function to close mobile navigation
+  function closeMobileNav() {
+    closeImg.style.display = "none";
+    hamImg.style.display = "block";
+    mainHeader.style.marginTop = "2rem"; // Reset margin
+    mobileNav.style.display = "none";
+    activeMenuImg.classList.remove("inactive");
+    activeMenuImg.classList.add("active");
+    inactiveMenuImg.classList.remove("active");
+    inactiveMenuImg.classList.add("inactive");
+  }
 
   // Add event listener to the ham-img
   hamImg.addEventListener("click", function () {
-    // Toggle the visibility of the images
     hamImg.style.display = "none";
     closeImg.style.display = "block";
-
-    // Toggle the display of mobileNav
+    mainHeader.style.marginTop = "8rem";
     mobileNav.style.display = "block";
-
-    // Swap the IDs of the images
     activeMenuImg.classList.remove("active");
     activeMenuImg.classList.add("inactive");
     inactiveMenuImg.classList.remove("inactive");
@@ -243,21 +246,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Add event listener to the close-img
-  closeImg.addEventListener("click", function () {
-    // Toggle the visibility of the images
-    closeImg.style.display = "none";
-    hamImg.style.display = "block";
+  closeImg.addEventListener("click", closeMobileNav);
 
-    // Toggle the display of mobileNav
-    mobileNav.style.display = "none";
+  // Add event listener to desktop navigation links
+  var desktopNavLinks = document.querySelectorAll(".desktop-nav nav a");
+  desktopNavLinks.forEach(function(link) {
+    link.addEventListener("click", closeMobileNav);
+  });
 
-    // Swap the IDs of the images
-    activeMenuImg.classList.remove("inactive");
-    activeMenuImg.classList.add("active");
-    inactiveMenuImg.classList.remove("active");
-    inactiveMenuImg.classList.add("inactive");
+  // Add event listener to window resize event
+  window.addEventListener("resize", function() {
+    // Check if window width exceeds a threshold (e.g., 768px)
+    if (window.innerWidth >= 768) {
+      closeMobileNav(); // Close mobile navigation
+    }
   });
 });
+
 
 function downloadPDF(pdfPath) {
   // Create an anchor element

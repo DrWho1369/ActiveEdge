@@ -128,11 +128,13 @@ audio {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
 .desktop-nav nav ul li {
   display: inline-block;
   margin-right: 20px;
+  justify-content: space-between;
 }
 
 .desktop-nav nav ul li:last-child {
@@ -144,6 +146,18 @@ audio {
   color: #333;
   font-weight: bold;
 }
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+#logo-header {
+  margin-left: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 
 header {
   position: fixed;
@@ -179,6 +193,10 @@ header h1 {
 
 nav ul li a:hover {
   color: var(--text-color);
+}
+
+.main-header{
+  margin-top: 2rem;
 }
 
 .headerBackground {
@@ -449,9 +467,10 @@ footer {
   max-width: 800px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: var(--background-color);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 8rem;
 }
 
 .services-container h1 {
@@ -469,28 +488,31 @@ footer {
 .service-card {
   padding: 20px;
   border-radius: 10px;
-  background-color: var(--background-color);
+  background-color: var(--banner-color);
   position: relative;
-  padding-bottom: 60px;
 }
 
 .service-card img {
   max-width: 100%;
   min-height: fit-content;
-
-  border-radius: 5px;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
   margin-bottom: 10px;
 }
 
 .service-card h2 {
-  margin-top: 0;
+  margin-top: 0.5rem;
   margin-bottom: 10px;
-  color: var(--text-color);
+  color: var(--higlight-color);
 }
 
 .service-card p {
   margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  font-size: 1rem;
   color: var(--text-color);
+  font-weight: 600;
 }
 
 .service-card button {
@@ -562,5 +584,18 @@ footer {
 @media screen and (min-width: 1160px) and (max-width: 1800px) {
   .hero img {
     align-self: center;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .desktop-nav nav ul {
+    justify-content: center;
+  }
+
+  .desktop-nav nav ul li {
+    margin-right: 0px;
+    margin-left: 0px;
+    font-size: 0.85rem;
+    font-weight: bold;
   }
 }

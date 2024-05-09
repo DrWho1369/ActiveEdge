@@ -9,16 +9,18 @@
   <body>
     <header>
       <!-- Desktop Nav -->
+      <!-- header not central on desktop (across all pages on desktop) -->
+      <!-- about doesnt take you to main from services (only "active edge" does, and this isn't displayed on mobile) -->
       <div class="desktop-nav">
         <a href="index.html">
           <div class="logo">
             <img src="./images/image.png" alt="Logo" />
-            <h1>ACTIVE EDGE</h1>
+            <h1 id="logo-header">ACTIVE EDGE</h1>
           </div>
         </a>
         <nav>
-          <ul>
-            <li><a href="index.html#about-section">About</a></li>
+          <ul class="header-links">
+            <li><a href="#about-section">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="learn.html">Learn</a></li>
             <li><a href="index.html">Contact/Booking</a></li>
@@ -27,25 +29,27 @@
       </div>
 
       <!-- Mobile Nav -->
+      <!-- about doesnt take you to main from services (only "active edge" does, and this isn't displayed on mobile) -->
+      <!-- add a home section to main page for mobile -->
       <div class="mobile-nav">
-        <input type="checkbox" id="toggle-menu" />
-        <!--change checkbox maybe? -->
-        <label for="toggle-menu" class="hamburger-menu">
-          <img src="./images/image.png" alt="Menu" />
+        <label id="toggle-menu" for="toggle-menu" class="hamburger-menu">
+          <img id="menu-img" src="./images/image.png" alt="Menu" />
+          <img id="ham-img" class="toggle" src="./images/menu.png" alt="Menu" />
+          <img id="close-img" class="toggle" src="./images/close.png" alt="Menu" />
           <!-- invert logo to white, add black background with rounded edges? -->
         </label>
         <nav>
-          <ul>
-            <li><a href="index.html#about-section">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="learn.html">Learn</a></li>
-            <li><a href="index.html">Contact/Booking</a></li>
+          <ul id="dropdown">
+            <li><a href="#about-section">ABOUT</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="learn.html">LEARN</a></li>
+            <li><a href="index.html">CONTACT/BOOKING</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <div class="services-container">
+    <div class="services-container" id="services">
       <h1>Services Offered</h1>
       <ul class="services-list">
         <!-- Services will be dynamically added here -->

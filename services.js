@@ -92,17 +92,48 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Get the hamburger menu checkbox and the mobile nav element
-  var toggleMenuCheckbox = document.getElementById("toggle-menu");
+  var hamImg = document.getElementById("ham-img");
+  var closeImg = document.getElementById("close-img");
   var mobileNav = document.querySelector(".mobile-nav nav");
+  var desktopNavLinks = document.querySelectorAll(".desktop-nav nav a");
+  var servicesContainer = document.getElementById("services");
 
-  // Add event listener to the hamburger menu checkbox
-  toggleMenuCheckbox.addEventListener("change", function () {
-    // If the checkbox is checked, display the mobile nav; otherwise, hide it
-    if (this.checked) {
-      mobileNav.style.display = "block";
-    } else {
-      mobileNav.style.display = "none";
+  // Function to close mobile navigation
+  function closeMobileNav() {
+    closeImg.style.display = "none";
+    hamImg.style.display = "block";
+    mobileNav.style.display = "none";
+    servicesContainer.style.marginTop = "8rem"; // Reset padding
+  }
+
+  hamImg.addEventListener("click", function () {
+    // Toggle the visibility of the images
+    hamImg.style.display = "none";
+    closeImg.style.display = "block";
+    // Toggle the display of mobileNav
+    mobileNav.style.display = "block";
+    servicesContainer.style.marginTop = "14rem"; // Add padding
+  });
+
+  closeImg.addEventListener("click", function () {
+    // Toggle the visibility of the images
+    closeImg.style.display = "none";
+    hamImg.style.display = "block";
+    // Toggle the display of mobileNav
+    mobileNav.style.display = "none";
+    servicesContainer.style.marginTop = "8rem"; // Reset padding when closing
+  });
+
+  // Add event listener to desktop navigation links
+  desktopNavLinks.forEach(function(link) {
+    link.addEventListener("click", closeMobileNav);
+  });
+
+  // Add event listener to window resize event
+  window.addEventListener("resize", function() {
+    // Check if window width exceeds a threshold (e.g., 768px)
+    if (window.innerWidth >= 768) {
+      closeMobileNav(); // Close mobile navigation
     }
   });
 });

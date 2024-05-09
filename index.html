@@ -38,15 +38,17 @@
   <body>
     <header>
       <!-- Desktop Nav -->
+      <!-- header not central on desktop (across all pages on desktop) -->
+      <!-- about doesnt take you to main from services (only "active edge" does, and this isn't displayed on mobile) -->
       <div class="desktop-nav">
         <a href="index.html">
           <div class="logo">
             <img src="./images/image.png" alt="Logo" />
-            <h1>ACTIVE EDGE</h1>
+            <h1 id="logo-header">ACTIVE EDGE</h1>
           </div>
         </a>
         <nav>
-          <ul>
+          <ul class="header-links">
             <li><a href="#about-section">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="learn.html">Learn</a></li>
@@ -56,10 +58,12 @@
       </div>
 
       <!-- Mobile Nav -->
+      <!-- about doesnt take you to main from services (only "active edge" does, and this isn't displayed on mobile) -->
+      <!-- add a home section to main page for mobile -->
       <div class="mobile-nav">
         <label id="toggle-menu" for="toggle-menu" class="hamburger-menu">
           <img id="menu-img" src="./images/image.png" alt="Menu" />
-          <img id="ham-img" class="toggle" src="./images/menu.png" alt="Menu" /> <!-- sidenote: ham and close display inverted on dom and CSS on toggle -->
+          <img id="ham-img" class="toggle" src="./images/menu.png" alt="Menu" />
           <img id="close-img" class="toggle" src="./images/close.png" alt="Menu" />
           <!-- invert logo to white, add black background with rounded edges? -->
         </label>
